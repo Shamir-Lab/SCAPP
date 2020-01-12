@@ -26,7 +26,7 @@ source scapp-env/bin/activate
 ```
 To install, download and run setup.py:
 ```
-    git clone https://github.com/dpellow/SCAPP.git
+    git clone https://github.com/Shamir-Lab/SCAPP.git
     cd SCAPP
     python setup.py install
 ```
