@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='scapp',
+    name='dpellow-scapp',
     version="1.0",
     author="David Pellow",
     author_email="dpellow@mail.tau.ac.il",
