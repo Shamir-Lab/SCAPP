@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 ###
 # Provide a command line script to classify sequences in a fasta file
 ###
