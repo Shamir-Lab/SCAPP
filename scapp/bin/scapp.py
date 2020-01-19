@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # The entire SCAPP workflow
 # Allow flexibility for different parts to be run manually
 
