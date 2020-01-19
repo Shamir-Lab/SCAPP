@@ -20,7 +20,7 @@ setup(
     scripts = ['bin/scapp.py', 'bin/recycle.py', 'bin/make_fasta_from_fastg.py', 'bin/classify_fastg.py',\
                 'bin/find_plasmid_gene_matches.py', 'bin/parse_plasmid_scores.py', \
                 'bin/create_hits_fasta.py'],
-    packages = ['scapp', 'recyclelib'],
+    packages = ['recyclelib'],
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
