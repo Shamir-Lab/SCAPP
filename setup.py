@@ -27,4 +27,5 @@ setup(
         'nose==1.3',
         'numpy==1.17'],
     include_package_data=True,
+    data_files = ['scapp/bin/PARAMS.py', 'scapp/data/*'],
 )
