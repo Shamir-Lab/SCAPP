@@ -11,7 +11,7 @@ import os, subprocess, sys
 import shutil
 import time
 
-import .recyclelib.utils as utils
+import recyclelib.utils as utils
 import PARAMS
 
 import make_fasta_from_fastg # for creating the fasta for read mappings
