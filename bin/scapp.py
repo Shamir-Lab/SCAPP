@@ -79,7 +79,7 @@ def parse_user_input():
         required=False, type=float
     )
     parser.add_argument('-gm','--gene_match_thresh',
-        help='threshold for % identity and fraction of length to match plasmid genes [0.75]',
+        help='threshold for %% identity and fraction of length to match plasmid genes [0.75]',
         required=False, type=float
     )
     parser.add_argument('-sls','--selfloop_score_thresh',
