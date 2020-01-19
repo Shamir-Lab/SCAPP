@@ -44,12 +44,12 @@ python setup.py install
 
 
 #### Configuring paths to required executables
-The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `bin/config.json`.
+The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `scapp/bin/config.json`.
 
 For example, if the BWA executable is in `/usr/bin/bwa/` then the line `"BWA_PATH" : "/usr/bin/bwa",` should be completed in the `config.json` file if that location is not in your `PATH`.
 
 ## Basic Usage
-The script `bin/scapp.py` is used to run the SCAPP pipeline. It is invoked as follows: 
+The script `scapp/bin/scapp.py` is used to run the SCAPP pipeline. It is invoked as follows: 
 ```
 python scapp.py -g <fastg graph> -o <output directory> [-k <max k value>] -r1 <reads 1> -r2 <reads 2> [-p <num processes>]
 ```
@@ -123,7 +123,7 @@ Instead of inputting all of these options on the command-line before each run of
 
 ### Plasmid-specific genes
 
-SCAPP searches for plasmid-specific genes in the assembly graph and potential plasmids. Curated sets of plasmid-specific genes (see the SCAPP manuscript for details) are located in the `data` directory.
+SCAPP searches for plasmid-specific genes in the assembly graph and potential plasmids. Curated sets of plasmid-specific genes (see the SCAPP manuscript for details) are located in the `scapp/data` directory.
 
 The user can add their own plasmid-specific gene sets in this directory. You may put nucleotide gene sequences in the `data/nt` subdirectory, or amino acid protein sequences in the `data/aa` subdirectory. The sequence files should be in fasta format.
 
