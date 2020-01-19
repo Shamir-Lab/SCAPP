@@ -17,10 +17,10 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts = ['bin/scapp.py', 'bin/recycle.py', 'bin/make_fasta_from_fastg.py', 'bin/classify_fastg.py',\
-                'bin/find_plasmid_gene_matches.py', 'bin/parse_plasmid_scores.py', \
-                'bin/create_hits_fasta.py'],
-    packages = ['recyclelib'],
+    scripts = ['scapp/bin/scapp.py','scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
+                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
+                'scapp/bin/create_hits_fasta.py'],
+    packages = ['scapp'],#,'recyclelib'],
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
