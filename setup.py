@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -17,16 +17,16 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts = ['scapp/bin/scapp.py','scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
-                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
-                'scapp/bin/create_hits_fasta.py'],
-    packages = ['scapp'],#'scapp.recyclelib'],
+    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
+#                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
+#                'scapp/bin/create_hits_fasta.py'],
+    packages = find_packages(),#['scapp'],#'scapp.recyclelib'],
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
-    package_data = {'scapp':['scapp/data/*']},
+    package_data = {'scapp':['data/*']},
     include_package_data=True,
-    data_files = ['scapp/bin/PARAMS.py', 'scapp/bin/params.json'],
+#    data_files = ['scapp/bin/PARAMS.py', 'scapp/bin/params.json'],
 )

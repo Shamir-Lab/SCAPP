@@ -163,9 +163,9 @@ def main():
     if args.good_cyc_dominated_thresh:
         PARAMS.GOOD_CYC_DOMINATED_THRESH = args.good_cyc_dominated_thresh
 
-    parent_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_path = os.path.join(parent_path,'data')
-    bin_path  = os.path.join(parent_path, 'bin')
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(base_path,'data')
+#    bin_path  = os.path.join(parent_path, 'bin')
 
     int_dir = os.path.join(outdir, 'intermediate_files')
     if not os.path.exists(int_dir):
@@ -176,7 +176,7 @@ def main():
 
     # Get config variables
     try:
-        config_path = os.path.join(bin_path,'config.json')
+        config_path = os.path.join(base_path,'config.json')
         with open(config_path) as config:
             config = json.load(config)
             bwa_path = config['BWA_PATH']
