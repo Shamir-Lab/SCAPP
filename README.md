@@ -15,7 +15,7 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 
 SCAPP is written in Python3. SCAPP uses NumPy, NetworkX, pySAM, and nose. The necessary versions of these required dependencies will all be installed by the `setup.py` script.
 
-SCAPP uses [BWA](https://github.com/lh3/bwa), [NCBI BLAST+ tools](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download), and [samtools](https://github.com/samtools/samtools). The executables of these programs should be available on the system on which SCAPP is run.
+SCAPP uses [BWA](https://github.com/lh3/bwa) (tested with v0.7.5 and v0.7.17) , [NCBI BLAST+ tools](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) (tested with v2.7 and v2.9), and [samtools](https://github.com/samtools/samtools) (tested with v1.9 and 1.19). The executables of these programs should be available on the system on which SCAPP is run.
 
 The [PlasClass classifier](https://github.com/Shamir-Lab/PlasClass) should also be installed in order to use the full functionality of SCAPP.
 
