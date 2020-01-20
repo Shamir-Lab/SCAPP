@@ -49,7 +49,7 @@ The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can e
 For example, if the BWA executable is in `/usr/bin/bwa/` then the line `"BWA_PATH" : "/usr/bin/bwa",` should be completed in the `config.json` file if that location is not in your `PATH`.
 
 ## Basic Usage
-The script `scapp/bin/scapp.py` is used to run the SCAPP pipeline. It is invoked as follows: 
+The script `scapp/scapp.py` is used to run the SCAPP pipeline. It is invoked as follows: 
 ```
 python scapp.py -g <fastg graph> -o <output directory> [-k <max k value>] -r1 <reads 1> -r2 <reads 2> [-p <num processes>]
 ```
