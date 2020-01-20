@@ -26,7 +26,7 @@ setup(
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
-    package_data = {'scapp':['scapp/data/*','scapp/recyclelib/*']},
+    package_data = {'scapp':['scapp/data/*']},
     include_package_data=True,
     data_files = ['scapp/bin/PARAMS.py', 'scapp/bin/params.json'],
 )
