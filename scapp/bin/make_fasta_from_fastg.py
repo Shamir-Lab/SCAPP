@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import re, argparse, os
-from recyclelib.utils import readfq
+from scapp_utils import readfq
 
 def parse_user_input():
     parser = argparse.ArgumentParser(

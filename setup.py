@@ -20,13 +20,13 @@ setup(
     scripts = ['scapp/bin/scapp.py','scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
                 'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
                 'scapp/bin/create_hits_fasta.py'],
-    packages = ['scapp'],#'recyclelib'],
+    packages = ['scapp'],#'scapp.recyclelib'],
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
+    package_data = {'scapp':['scapp/data/*','scapp/recyclelib/*']},
     include_package_data=True,
-    package_data = {'scapp':['scapp/data/*']},
-    data_files = ['scapp/bin/PARAMS.py'],
+    data_files = ['scapp/bin/PARAMS.py', 'scapp/bin/params.json'],
 )

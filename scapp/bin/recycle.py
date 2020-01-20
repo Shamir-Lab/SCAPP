@@ -7,7 +7,7 @@ import multiprocessing as mp
 import pysam
 
 
-from recyclelib.utils import *
+from scapp_utils import *
 
 import PARAMS
 
