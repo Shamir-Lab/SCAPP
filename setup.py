@@ -17,11 +17,11 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages = ['scapp'],#find_packages(),    
+#    packages = ['scapp'],#find_packages(),    
 #    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
 #                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
 #                'scapp/bin/create_hits_fasta.py'],
-#    packages = ['scapp'],#find_packages(),
+    packages = find_packages(),
  
 #    package_dir={"": "scapp"},
     install_requires=[
@@ -33,7 +33,7 @@ setup(
     include_package_data=True,
     entry_points = {
         "console_scripts": [
-            "scapp=scapp:main",
+            "scapp=scapp.scapp:main",
         ]
     },
    # data_files = ['scapp/scapp_utils.py'],# 'scapp/bin/params.json'],
