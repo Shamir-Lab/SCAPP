@@ -17,14 +17,14 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages = ['scapp'], 
+    packages = find_packages(),#['scapp'], 
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
     package_data = {'scapp':['data/*/*']},
-  #  include_package_data=True,
+    include_package_data=True,
     entry_points = {
         "console_scripts": [
             "scapp=scapp.scapp:main",
