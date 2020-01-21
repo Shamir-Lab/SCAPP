@@ -30,6 +30,6 @@ setup(
             "scapp=scapp.scapp:main",
         ]
     },
-    data_files = [('scapp',['scapp_utils.py', 'config.json', 'params.json','recycle.py', 'make_fasta_from_fastg.py', 'classify_fastg.py','PARAMS.py', 'parse_plasmid_scores.py','create_hits_fasta.py', 'find_plasmid_gene_matches.py'])]
+    data_files = [('scapp',['scapp/scapp_utils.py', 'config.json', 'params.json','recycle.py', 'make_fasta_from_fastg.py', 'classify_fastg.py','PARAMS.py', 'parse_plasmid_scores.py','create_hits_fasta.py', 'find_plasmid_gene_matches.py'])]
     #data_files = [('',['scapp/scapp_utils.py', 'scapp/config.json', 'scapp/params.json','scapp/recycle.py', 'scapp/make_fasta_from_fastg.py', 'scapp/classify_fastg.py','scapp/PARAMS.py', 'scapp/parse_plasmid_scores.py','scapp/create_hits_fasta.py', 'scapp/find_plasmid_gene_matches.py'])]
 )
