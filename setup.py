@@ -28,5 +28,5 @@ setup(
         'numpy==1.17'],
     package_data = {'scapp':['data/*']},
     include_package_data=True,
-#    data_files = ['scapp/bin/PARAMS.py', 'scapp/bin/params.json'],
+    data_files = ['scapp/scapp_utils.py'],# 'scapp/bin/params.json'],
 )
