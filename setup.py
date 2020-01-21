@@ -18,17 +18,14 @@ setup(
         "Operating System :: OS Independent",
     ],
 #    packages = ['scapp'],#find_packages(),    
-#    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
-#                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
-#                'scapp/bin/create_hits_fasta.py'],
     packages = find_packages(),
- 
-#    package_dir={"": "scapp"},
+    package_dir={"scapp": ""},
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
+#    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
     package_data = {'scapp':['data/*']},
     include_package_data=True,
     entry_points = {
