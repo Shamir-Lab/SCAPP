@@ -17,20 +17,18 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-#    packages = ['scapp'],#find_packages(),    
-    packages = find_packages(),
-     install_requires=[
+    packages = ['scapp'], 
+    install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
         'numpy==1.17'],
-#    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
-    package_data = {'scapp':['data/*']},
+    package_data = {'scapp':['data/*/*']},
     include_package_data=True,
     entry_points = {
         "console_scripts": [
             "scapp=scapp.scapp:main",
         ]
     },
-   # data_files = ['scapp/scapp_utils.py'],# 'scapp/bin/params.json'],
+    data_files = ['scapp/scapp_utils.py', 'scapp/config.json', 'scapp/params.json','scapp/recycle.py', 'scapp/make_fasta_from_fastg.py', 'scapp/classify_fastg.py','scapp/PARAMS.py', 'scapp/parse_plasmid_scores.py','scapp/create_hits_fasta.py', 'scapp/find_plasmid_gene_matches.py']
 )
