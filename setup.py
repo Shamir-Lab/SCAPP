@@ -18,7 +18,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     packages = ['scapp'],#find_packages(),    
-    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
+#    scripts = ['scapp/scapp.py'],#'scapp/bin/recycle.py', 'scapp/bin/make_fasta_from_fastg.py', 'scapp/bin/classify_fastg.py',\
 #                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
 #                'scapp/bin/create_hits_fasta.py'],
     install_requires=[
@@ -28,5 +28,10 @@ setup(
         'numpy==1.17'],
     package_data = {'scapp':['data/*']},
     include_package_data=True,
+    entry_points = {
+        "console_scripts": [
+            "scapp=scapp.scapp:main",
+        ]
+    },
    # data_files = ['scapp/scapp_utils.py'],# 'scapp/bin/params.json'],
 )
