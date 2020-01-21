@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='dpellow-scapp',
+    name='scapp-dpellow',
     version="0.1",
     author="David Pellow",
     author_email="dpellow@mail.tau.ac.il",
@@ -22,9 +22,7 @@ setup(
 #                'scapp/bin/find_plasmid_gene_matches.py', 'scapp/bin/parse_plasmid_scores.py', \
 #                'scapp/bin/create_hits_fasta.py'],
     packages = find_packages(),
- 
-    package_dir={"": ""},
-    install_requires=[
+     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
