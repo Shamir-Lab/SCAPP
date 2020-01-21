@@ -24,7 +24,7 @@ setup(
 #    packages = ['scapp'],#find_packages(),
  
     packages=find_packages(where="scapp"),
-    package_dir={"": "scapp"}
+    package_dir={"": "scapp"},
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
