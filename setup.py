@@ -23,7 +23,7 @@ setup(
 #                'scapp/bin/create_hits_fasta.py'],
     packages = find_packages(),
  
-#    package_dir={"": "scapp"},
+    package_dir={"": "scapp"},
     install_requires=[
         'networkx==2.4',
         'pysam==0.15.3',
