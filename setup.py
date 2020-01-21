@@ -24,7 +24,7 @@ setup(
         'nose==1.3',
         'numpy==1.17'],
     package_data = {'scapp':['data/*/*']},
-    include_package_data=True,
+  #  include_package_data=True,
     entry_points = {
         "console_scripts": [
             "scapp=scapp.scapp:main",
