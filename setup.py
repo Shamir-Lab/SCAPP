@@ -33,7 +33,7 @@ setup(
     include_package_data=True,
     entry_points = {
         "console_scripts": [
-            "scapp=scapp.scapp:main",
+            "scapp=scapp:main",
         ]
     },
    # data_files = ['scapp/scapp_utils.py'],# 'scapp/bin/params.json'],
