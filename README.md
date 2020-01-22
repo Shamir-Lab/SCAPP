@@ -2,16 +2,35 @@
 
 SCAPP assembles plasmids from metagenomic assembly graphs.
 
-  * [Installation](#installation)
+- [Installation](#installation)
+  * [With Conda](#with-conda)
+  * [From sources](#from-sources)
       - [Configuring paths to required executables](#configuring-paths-to-required-executables)
-  * [Basic Usage](#basic-usage)
-  * [Main output files](#main-output-files)
-  * [Advanced usage](#advanced-usage)
-    + [Plasmid-specific genes](#plasmid-specific-genes)
-
-
+- [Basic Usage](#basic-usage)
+- [Main output files](#main-output-files)
+- [Advanced usage](#advanced-usage)
+  * [Plasmid-specific genes](#plasmid-specific-genes)
 
 ## Installation
+
+### With Conda
+
+You can install SCAPP as a conda package (tested with Miniconda3):
+Download the installation file `install_scapp.yaml` in the desired folder. For example:
+````
+wget https://raw.githubusercontent.com/Shamir-Lab/SCAPP/master/install_scapp.yaml
+````
+
+Create and activate the conda environment:
+```
+conda env create -f install_scapp.yaml
+conda activate scapp
+```
+
+Now you can run SCAPP by entering the command `scapp`.
+
+### From sources
+If not using Conda to install, then download the sources and install according to the following:
 
 SCAPP is written in Python3. SCAPP uses NumPy, NetworkX, pySAM, and nose. The necessary versions of these required dependencies will all be installed by the `setup.py` script.
 
@@ -42,20 +61,21 @@ cd PlasClass
 python setup.py install
 ```
 
+##### Configuring paths to required executables
+Note that this step can be skipped if you installed using Conda.
 
-#### Configuring paths to required executables
 The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `scapp/bin/config.json`.
 
 For example, if the BWA executable is in `/usr/bin/bwa/` then the line `"BWA_PATH" : "/usr/bin/bwa",` should be completed in the `config.json` file if that location is not in your `PATH`.
 
 ## Basic Usage
-The script `scapp/scapp.py` is used to run the SCAPP pipeline. It is invoked as follows: 
+To run the SCAPP pipeline: 
 ```
-python scapp.py -g <fastg graph> -o <output directory> [-k <max k value>] -r1 <reads 1> -r2 <reads 2> [-p <num processes>]
+scapp -g <fastg graph> -o <output directory> [-k <max k value>] -r1 <reads 1> -r2 <reads 2> [-p <num processes>]
 ```
 If a BAM alignment file of the reads to the assembly graph already exists, then use the following command to avoid re-running the alignment:
 ```
-python scapp.py -g <fastg graph> -o <output directory> [-k <max k value>] -b <BAM file> [-p <num processes>]
+scapp -g <fastg graph> -o <output directory> [-k <max k value>] -b <BAM file> [-p <num processes>]
 ```
 The common command line options are:
 
