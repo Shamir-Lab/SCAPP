@@ -1,0 +1,14 @@
+name: scapp
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.7
+  - blast
+  - bwa
+  - samtools
+  - pip
+  - pip:
+    - git+https://github.com/Shamir-Lab/PlasClass.git
+    - git+https://github.com/Shamir-Lab/SCAPP.git
