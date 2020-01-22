@@ -58,7 +58,8 @@ def create_db(infile,ncbi_bin, outdir):
     outputfile = os.path.basename(infile) + ".blastdb"
     outputpath = os.path.join(outdir,outputfile)
 
-    command = os.path.join(ncbi_bin,'makeblastdb') + "  -in " + infile + " -dbtype nucl -parse_seqids -out " + outputpath
+    command = os.path.join(ncbi_bin,'makeblastdb') + "  -in " + infile + " -dbtype nucl -out " + outputpath
+#    command = os.path.join(ncbi_bin,'makeblastdb') + "  -in " + infile + " -dbtype nucl -parse_seqids -out " + outputpath
 
     print("Running command: " + command)
     try:
