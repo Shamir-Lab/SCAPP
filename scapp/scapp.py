@@ -11,6 +11,7 @@ import os, subprocess, sys
 import shutil
 import time
 
+sys.path.append(os.path.realpath(os.path.expanduser(os.path.dirname(os.path.abspath(__file__)))))
 import scapp_utils as utils
 import PARAMS
 
