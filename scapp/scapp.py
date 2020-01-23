@@ -244,7 +244,7 @@ def main():
 
         # Sort filtered reads with samtools
         sorted_reads = os.path.join(int_dir, "reads_pe_primary.sort")
-        cmd = samtools_file + " sort " + primary_bam + ' ' + sorted_reads
+        cmd = samtools_file + " sort " + primary_bam + ' -o ' + sorted_reads
         logger.info("Executing command: '{}'".format(cmd))
         subprocess.check_call(cmd,stderr=subprocess.STDOUT, stdout=bwa_outfile, shell=True)
         bwa_outfile.flush()
