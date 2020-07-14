@@ -64,7 +64,7 @@ python setup.py install
 ##### Configuring paths to required executables
 Note that this step can be skipped if you installed using Conda.
 
-The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `scapp/bin/config.json`.
+The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `scapp/config.json`.
 
 For example, if the BWA executable is in `/usr/bin/bwa/` then the line `"BWA_PATH" : "/usr/bin/bwa",` should be completed in the `config.json` file if that location is not in your `PATH`.
 
