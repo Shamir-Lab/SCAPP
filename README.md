@@ -4,8 +4,10 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 
 - [Installation](#installation)
   * [With Conda](#with-conda)
+      - [From Bioconda](#from-bioconda)
   * [From sources](#from-sources)
       - [Configuring paths to required executables](#configuring-paths-to-required-executables)
+      - [Testing your SCAPP installation](#testing-your-scapp-installation)
 - [Basic Usage](#basic-usage)
 - [Main output files](#main-output-files)
 - [Advanced usage](#advanced-usage)
@@ -28,6 +30,9 @@ conda activate scapp
 ```
 
 Now you can run SCAPP by entering the command `scapp`.
+
+#### From Bioconda
+Alternatively, you can install directly from Bioconda with `conda install -c bioconda scapp`
 
 ### From sources
 If not using Conda to install, then download the sources and install according to the following:
@@ -67,6 +72,11 @@ Note that this step can be skipped if you installed using Conda.
 The BWA, samtools, and BLAST+ executables must be available to SCAPP. They can either be added to your `PATH` environment variable, or you can specify the paths to each of them in the file `scapp/config.json`.
 
 For example, if the BWA executable is in `/usr/bin/bwa/` then the line `"BWA_PATH" : "/usr/bin/bwa",` should be completed in the `config.json` file if that location is not in your `PATH`.
+
+##### Testing your SCAPP installation
+Once you have completed the above you can run `./run_test.sh` from the outermost SCAPP directory to test your installation.
+
+(If the test fails please ensure you have set up the environment, installed, and configured SCAPP as described. Open an issue on this GitHub page with any problems you run into.)
 
 ## Basic Usage
 To run the SCAPP pipeline: 
