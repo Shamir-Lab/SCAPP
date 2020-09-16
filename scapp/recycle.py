@@ -119,15 +119,6 @@ def run_scapp(fastg, outdir, bampath, num_procs, max_k, \
     logger.info("Removing %d isolate nodes" % len(list(nx.isolates(G))))
     G.remove_nodes_from(list(nx.isolates(G)))
 
-    cov_vals = [get_cov_from_spades_name(n) for n in G.nodes()]
-    MED_COV = np.median(cov_vals)
-    STD_COV = np.std(cov_vals)
-    # set thresholds for max. CV, min
-    # path coverage for allowing cross mappings
-    if ISO:
-        thresh = np.percentile(cov_vals, 95)
-    else:
-        thresh = np.percentile(cov_vals, 75)
 
     logger.info("Coverage threshold:%4f" % thresh)
     print(MED_COV, STD_COV, thresh)
@@ -202,7 +193,7 @@ def run_scapp(fastg, outdir, bampath, num_procs, max_k, \
         VISITED_NODES.update(COMP.nodes())
         VISITED_NODES.update(rc_nodes)
 
-        path_set = process_component(COMP, G, max_k, min_length, max_CV, SEQS, thresh, bamfile, pool, use_scores, use_genes, num_procs)
+        path_set = process_component(COMP, G, max_k, min_length, max_CV, SEQS, bamfile, pool, use_scores, use_genes, num_procs)
 
         for p in path_set:
             name = get_spades_type_name(path_count, p[0], SEQS, max_k, G, p[1])
