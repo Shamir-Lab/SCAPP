@@ -561,7 +561,7 @@ def is_good_cyc(path, G, bamfile):
     else: return True
 
 #########################
-def process_component(COMP, G, max_k, min_length, max_CV, SEQS, thresh, bamfile, pool, use_scores=False, use_genes=False, num_procs=1):
+def process_component(COMP, G, max_k, min_length, max_CV, SEQS, bamfile, pool, use_scores=False, use_genes=False, num_procs=1):
     """ run recycler for a single component of the graph
         use multiprocessing to process components in parallel
     """
