@@ -119,9 +119,6 @@ def run_scapp(fastg, outdir, bampath, num_procs, max_k, \
     logger.info("Removing %d isolate nodes" % len(list(nx.isolates(G))))
     G.remove_nodes_from(list(nx.isolates(G)))
 
-
-    logger.info("Coverage threshold:%4f" % thresh)
-    print(MED_COV, STD_COV, thresh)
     path_count = 0
     SEQS = get_fastg_seqs_dict(fastg,G)
 
