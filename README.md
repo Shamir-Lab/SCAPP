@@ -5,6 +5,7 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 - [Installation](#installation)
   * [With Conda](#with-conda)
       - [From Bioconda](#from-bioconda)
+      - [From yaml file](#with-install_scapp.yaml)
   * [From sources](#from-sources)
       - [Configuring paths to required executables](#configuring-paths-to-required-executables)
       - [Testing your SCAPP installation](#testing-your-scapp-installation)
@@ -17,7 +18,12 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 
 ### With Conda
 
-You can install SCAPP as a conda package (tested with Miniconda3):
+#### From Bioconda
+You can install directly from Bioconda with `conda install -c bioconda scapp`
+
+#### With install_scapp.yaml
+
+Alternatively, you can install SCAPP as a conda package (tested with Miniconda3):
 Download the installation file `install_scapp.yaml` in the desired folder. For example:
 ````
 wget https://raw.githubusercontent.com/Shamir-Lab/SCAPP/master/install_scapp.yaml
@@ -31,8 +37,6 @@ conda activate scapp
 
 Now you can run SCAPP by entering the command `scapp`.
 
-#### From Bioconda
-Alternatively, you can install directly from Bioconda with `conda install -c bioconda scapp`
 
 ### From sources
 If not using Conda to install, then download the sources and install according to the following:
