@@ -5,7 +5,7 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 - [Installation](#installation)
   * [With Conda](#with-conda)
       - [From Bioconda](#from-bioconda)
-      - [From yaml file](#with-install_scapp.yaml)
+      - [From yaml file](#with-install-scappyaml)
   * [From sources](#from-sources)
       - [Configuring paths to required executables](#configuring-paths-to-required-executables)
       - [Testing your SCAPP installation](#testing-your-scapp-installation)
