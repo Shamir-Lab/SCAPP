@@ -16,7 +16,7 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 
 ## Installation
 
-SCAPP has been developed and tested on Linux, the isntallation instructions below have not yet been tested on other operating systems.
+SCAPP has been developed and tested on Linux, the installation instructions below have not yet been tested on other operating systems.
 
 ### With Conda
 
