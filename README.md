@@ -13,6 +13,7 @@ SCAPP assembles plasmids from metagenomic assembly graphs.
 - [Main output files](#main-output-files)
 - [Advanced usage](#advanced-usage)
   * [Plasmid-specific genes](#plasmid-specific-genes)
+  * [Long reads](#long-reads)
 
 ## Installation
 
@@ -164,5 +165,20 @@ SCAPP searches for plasmid-specific genes in the assembly graph and potential pl
 The user can add their own plasmid-specific gene sets in this directory. You may put nucleotide gene sequences in the `data/nt` subdirectory, or amino acid protein sequences in the `data/aa` subdirectory. The sequence files should be in fasta format.
 
 If you wish to remove certain plasmid-specific sets, simply move them out of the `data` directory.
+
+### Long reads
+
+SCAPP is designed to run on short, paired-end read libraries (such as Illumina HiSeq) and we believe it will work best in this setting. We have tried to provide support for some requests of running SCAPP with long reads and will add details of how to do this here as we expand support:
+
+#### Alignment
+The read alignment process used in SCAPP is specific to short paired-end reads. You will have to align your reads to the assembly graph to create a bam file. This alignment file is then provided to SCAPP using the -b option.
+
+#### MetaFlye assemblies
+
+MetaFlye generates a \*.gfa assembly graph according to a specific definition of the gfa format. [This script](https://raw.githubusercontent.com/dpellow/SCAPP/master/metaflye_gfa2fastg.py) will convert the gfa file to the fastg format required by SCAPP. The script is run as: python metaflye_gfa2fastg.py <infile> <outfile>. This script is only meant for MetaFlye output (as of Feb 2020).
+
+SCAPP should then be run with this converted fastg file, you bam alignment file AND THE OPTION -k 0.
+
+This pipeline has been tested on PacBio HiFi reads aligned using BWA.
 
 
