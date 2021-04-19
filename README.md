@@ -175,10 +175,8 @@ The read alignment process used in SCAPP is specific to short paired-end reads. 
 
 #### MetaFlye assemblies
 
-MetaFlye generates a \*.gfa assembly graph according to a specific definition of the gfa format. [This script](https://raw.githubusercontent.com/dpellow/SCAPP/master/metaflye_gfa2fastg.py) will convert the gfa file to the fastg format required by SCAPP. The script is run as: python metaflye_gfa2fastg.py <infile> <outfile>. This script is only meant for MetaFlye output (as of Feb 2020).
+MetaFlye generates a \*.gfa assembly graph according to a specific definition of the gfa format. [This script](https://raw.githubusercontent.com/dpellow/SCAPP/master/metaflye_gfa2fastg.py) should convert the gfa file to the fastg format required by SCAPP. The script is run as: python metaflye_gfa2fastg.py <infile> <outfile>. This script is only meant for MetaFlye output (as of Feb 2020).
 
 SCAPP should then be run with this converted fastg file, you bam alignment file AND THE OPTION -k 0.
-
-This pipeline has been tested on PacBio HiFi reads aligned using BWA.
 
 
