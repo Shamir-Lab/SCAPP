@@ -8,7 +8,7 @@ import argparse
 def parse_user_input():
     parser = argparse.ArgumentParser(
         description=
-        'create_hits_fasta creates a fasta file of the plasmids (found by Recycler2) \
+        'create_hits_fasta creates a fasta file of the plasmids (found by SCAPP) \
          that have plasmid gene hits (found with the find_plasmid_gene_matches.py sript)'
         )
     parser.add_argument('-f','--fasta',
