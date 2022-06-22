@@ -22,7 +22,7 @@ setup(
         'networkx==2.4',
         'pysam==0.15.3',
         'nose==1.3',
-        'numpy==1.17.4'],
+        'numpy==1.22.0'],
     package_data = {'scapp':['data/*/*']},
     include_package_data=True,
     entry_points = {
