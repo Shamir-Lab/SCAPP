@@ -22,6 +22,8 @@ SCAPP has been developed and tested on Linux, the installation instructions belo
 ### With Conda
 
 #### From Bioconda
+**This is the preferred installation method**
+
 You can install directly from Bioconda with `conda install -c bioconda scapp`
 
 #### With install scapp yaml file
